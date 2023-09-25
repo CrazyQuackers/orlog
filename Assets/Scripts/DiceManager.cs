@@ -26,24 +26,28 @@ public class DiceManager : MonoBehaviour
     private Sprite[,] diceFaces = new Sprite[6, 6];
 
     [SerializeField] private StartMatch startMatch;
+    [SerializeField] private GameObject confirmUI;
 
-    [SerializeField] private float rollTime;
-    [SerializeField] private float diceChangeTime;
+    [SerializeField] private float diceRollTime;
+    [SerializeField] private int diceRollFrames;
+    [SerializeField] private float eivorThinkTime;
 
     private bool isPlayerStart;
-    private GameObject[] remainingPlayerDice;
-    private GameObject[] remainingEivorDice;
+    private List<GameObject> remainingPlayerDice = new List<GameObject>();
+    private List<GameObject> remainingEivorDice = new List<GameObject>();
     private int playerRolls;
     private int eivorRolls;
+    private List<string> chosenDice = new List<string>();
 
     void Start()
     {
         setDiceActive(playerDice.Concat(playerPlaceholderDice).Concat(playerActiveDice)
-            .Concat(eivorDice).Concat(eivorPlaceholderDice).Concat(eivorActiveDice).ToArray(), false);
+            .Concat(eivorDice).Concat(eivorPlaceholderDice).Concat(eivorActiveDice).ToList(), false);
         setDiceFaces();
+        confirmUI.SetActive(false);
     }
 
-    private void setDiceActive(GameObject[] allDice, bool active)
+    private void setDiceActive(List<GameObject> allDice, bool active)
     {
         foreach (GameObject dice in allDice)
         {
@@ -54,8 +58,8 @@ public class DiceManager : MonoBehaviour
     public void startRound()
     {
         isPlayerStart = startMatch.getIsPlayerStart();
-        remainingPlayerDice = (GameObject[]) playerDice.Clone();
-        remainingEivorDice = (GameObject[]) eivorDice.Clone();
+        remainingPlayerDice = playerDice.ToList();
+        remainingEivorDice = eivorDice.ToList();
         playerRolls = 0;
         eivorRolls = 0;
         roll();
@@ -74,55 +78,65 @@ public class DiceManager : MonoBehaviour
                 ? playerRolls < eivorRolls
                 : isPlayerStart;
 
-            if (isPlayerRoll && remainingPlayerDice.Length == 0)
+            if (isPlayerRoll && remainingPlayerDice.Count == 0)
             {
                 playerRolls++;
                 roll();
             }
-            else if (!isPlayerRoll && remainingEivorDice.Length == 0)
+            else if (!isPlayerRoll && remainingEivorDice.Count == 0)
             {
                 eivorRolls++;
                 roll();
             }
             else if (isPlayerRoll)
             {
-                performRoll(remainingPlayerDice, remainingEivorDice);
-                playerRolls++;
+                StartCoroutine(playerTurn());
             }
             else
             {
-                performRoll(remainingEivorDice, remainingPlayerDice);
-                eivorRolls++;
+                StartCoroutine(eivorTurn());
             }
         }
     }
 
-    private void performRoll(GameObject[] remainingDice, GameObject[] enemyDice)
+    IEnumerator playerTurn()
     {
-        setDiceActive(enemyDice, false);
-        setDiceActive(remainingDice, true);
-        int[] results = getDiceResults(remainingDice.Length);
-        /*
-        int[] currentDiceImages = getDiceResults(remainingDice.Length);
-        Debug.Log(results);
+        yield return StartCoroutine(performRoll(remainingPlayerDice));
+        playerRolls++;
 
-        float lastDiceChange = 0f;
-        float startRollTime = Time.time;
-        Debug.Log(startRollTime);
-
-        while (Time.time < startRollTime + rollTime)
+        if (playerRolls == 3)
         {
-            Debug.Log(Time.time);
-            if (Time.time >= lastDiceChange + diceChangeTime)
-            {
-                changeDiceImages(remainingDice, currentDiceImages);
-                getNextDiceImages(currentDiceImages);
-                lastDiceChange = Time.time;
-            }
+            confirmChoice(true, true);
         }
-        */
+        else
+        {
+            confirmUI.SetActive(true);
+        }
+    }
 
-        changeDiceImages(remainingDice, results);
+    IEnumerator eivorTurn()
+    {
+        yield return StartCoroutine(performRoll(remainingEivorDice));
+        eivorRolls++;
+        yield return new WaitForSeconds(eivorThinkTime);
+        eivorAIChooseDice();
+        yield return new WaitForSeconds(eivorThinkTime);
+        confirmChoice(false, false);
+    }
+
+    IEnumerator performRoll(List<GameObject> remainingDice)
+    {
+        setDiceActive(remainingDice, true);
+        int[] currentDiceImages = getDiceResults(remainingDice.Count);
+
+        for (int i = 0; i < diceRollFrames; i++)
+        {
+            changeDiceImages(remainingDice, currentDiceImages);
+            getNextDiceImages(currentDiceImages);
+            yield return new WaitForSeconds(diceRollTime);
+        }
+
+        changeDiceImages(remainingDice, getDiceResults(remainingDice.Count));
     }
 
     private void getNextDiceImages(int[] diceImages)
@@ -133,13 +147,13 @@ public class DiceManager : MonoBehaviour
         }
     }
 
-    private void changeDiceImages(GameObject[] remainingDice, int[] diceImages)
+    private void changeDiceImages(List<GameObject> remainingDice, int[] diceImages)
     {
-        for (int i = 0; i < remainingDice.Length; i++)
+        for (int i = 0; i < remainingDice.Count; i++)
         {
             GameObject dice = remainingDice[i];
             int diceNumber = int.Parse(dice.name.Substring(4));
-            dice.GetComponentsInChildren<Image>()[0].sprite = diceFaces[diceNumber - 1, diceImages[i]];
+            dice.GetComponentInChildren<Image>().sprite = diceFaces[diceNumber - 1, diceImages[i]];
         }
     }
 
@@ -155,9 +169,92 @@ public class DiceManager : MonoBehaviour
         return results;
     }
 
-    public void diceClick(Outline outline)
+    public void diceClick(GameObject dice)
     {
-        outline.enabled = !outline.enabled;
+        string name = dice.name;
+
+        if (chosenDice.Contains(name))
+        {
+            chosenDice.Remove(name);
+            dice.GetComponentInChildren<Outline>().enabled = false;
+        }
+        else
+        {
+            chosenDice.Add(name);
+            dice.GetComponentInChildren<Outline>().enabled = true;
+        }
+    }
+
+    private void eivorAIChooseDice()
+    {
+        //make AI choose best dice later
+        int diceCount = remainingEivorDice.Count;
+        int firstDiceNumber = Random.Range(0, diceCount);
+        int secondDiceNumber = Random.Range(0, diceCount);
+
+        while (firstDiceNumber == secondDiceNumber)
+        {
+            secondDiceNumber = Random.Range(0, diceCount);
+        }
+
+        diceClick(remainingEivorDice[firstDiceNumber]);
+        diceClick(remainingEivorDice[secondDiceNumber]);
+    }
+
+    public void confirmClick()
+    {
+        confirmChoice(true, playerRolls == 3);
+    }
+
+    private void confirmChoice(bool isPlayerTurn, bool finalTurn)
+    {
+        confirmUI.SetActive(false);
+        List<GameObject> remainingDice = isPlayerTurn ? remainingPlayerDice : remainingEivorDice;
+        setDiceActive(remainingDice, false);
+
+        foreach (GameObject dice in remainingDice)
+        {
+            dice.GetComponentInChildren<Outline>().enabled = false;
+
+            if (chosenDice.Contains(dice.name) || finalTurn)
+            {
+                showPlaceHolderDice(isPlayerTurn, dice.GetComponentInChildren<Image>().sprite);
+            }
+        }
+
+        setUpNextDiceRoll(isPlayerTurn, remainingDice);
+    }
+
+    private void showPlaceHolderDice(bool isPlayerTurn, Sprite diceImage)
+    {
+        GameObject[] placeholderDice = isPlayerTurn ? playerPlaceholderDice : eivorPlaceholderDice;
+
+        for (int i = 0; i < placeholderDice.Length; i++)
+        {
+            GameObject dice = placeholderDice[i];
+
+            if (!dice.activeSelf)
+            {
+                dice.GetComponentInChildren<Image>().sprite = diceImage;
+                dice.SetActive(true);
+                break;
+            }
+        }
+    }
+
+    private void setUpNextDiceRoll(bool isPlayerTurn, List<GameObject> remainingDice)
+    {
+        if (isPlayerTurn)
+        {
+            remainingPlayerDice = remainingDice.FindAll(dice => !chosenDice.Contains(dice.name));
+        }
+        else
+        {
+            remainingEivorDice = remainingDice.FindAll(dice => !chosenDice.Contains(dice.name));
+        }
+
+        chosenDice.Clear();
+        roll();
     }
 
     private void setDiceFaces()

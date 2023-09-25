@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 82166096}
   - component: {fileID: 82166098}
   - component: {fileID: 82166097}
-  - component: {fileID: 82166100}
   - component: {fileID: 82166099}
   m_Layer: 0
   m_Name: DiceImage
@@ -701,62 +700,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82166095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 82166100}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &82166100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82166095}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
@@ -776,7 +719,6 @@ GameObject:
   - component: {fileID: 90084887}
   - component: {fileID: 90084889}
   - component: {fileID: 90084888}
-  - component: {fileID: 90084891}
   - component: {fileID: 90084890}
   m_Layer: 0
   m_Name: DiceImage
@@ -843,62 +785,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 90084886}
   m_CullTransparentMesh: 1
 --- !u!114 &90084890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90084886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 90084891}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &90084891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1267,8 +1153,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 114401293}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 1375968870}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1461,19 +1347,19 @@ MonoBehaviour:
   - {fileID: 740676728}
   - {fileID: 52954987}
   playerPlaceholderDice:
-  - {fileID: 2136232708}
-  - {fileID: 1710221196}
-  - {fileID: 417123386}
-  - {fileID: 1494588033}
-  - {fileID: 1500018988}
   - {fileID: 1053299092}
+  - {fileID: 1500018988}
+  - {fileID: 1494588033}
+  - {fileID: 417123386}
+  - {fileID: 1710221196}
+  - {fileID: 2136232708}
   playerActiveDice:
-  - {fileID: 1470714489}
-  - {fileID: 1681815436}
-  - {fileID: 2036691360}
-  - {fileID: 2101512537}
-  - {fileID: 1745581567}
   - {fileID: 565328731}
+  - {fileID: 1745581567}
+  - {fileID: 2101512537}
+  - {fileID: 2036691360}
+  - {fileID: 1681815436}
+  - {fileID: 1470714489}
   eivorDice:
   - {fileID: 755911494}
   - {fileID: 1157691550}
@@ -1482,19 +1368,19 @@ MonoBehaviour:
   - {fileID: 1298733388}
   - {fileID: 1340130490}
   eivorPlaceholderDice:
-  - {fileID: 1295497521}
-  - {fileID: 1697308761}
-  - {fileID: 1910918498}
-  - {fileID: 687378990}
-  - {fileID: 141826109}
   - {fileID: 319085301}
+  - {fileID: 141826109}
+  - {fileID: 687378990}
+  - {fileID: 1910918498}
+  - {fileID: 1697308761}
+  - {fileID: 1295497521}
   eivorActiveDice:
-  - {fileID: 1196049590}
-  - {fileID: 1957823023}
-  - {fileID: 898898124}
-  - {fileID: 763313318}
-  - {fileID: 752087836}
   - {fileID: 1788543127}
+  - {fileID: 752087836}
+  - {fileID: 763313318}
+  - {fileID: 898898124}
+  - {fileID: 1957823023}
+  - {fileID: 1196049590}
   axe: {fileID: 21300000, guid: c2131a508e8aff6458d19b38dbc9a145, type: 3}
   arrow: {fileID: 21300000, guid: 4015f4de934c66842aa34fe27d034992, type: 3}
   arrow_plus: {fileID: 21300000, guid: 95b8ab0d103b0674d891e0a93729776f, type: 3}
@@ -1505,8 +1391,10 @@ MonoBehaviour:
   steal: {fileID: 21300000, guid: 0aef6bad2730168488467c7873f12ba7, type: 3}
   steal_plus: {fileID: 21300000, guid: 9e420fa69b0d8834ca593af8d819c961, type: 3}
   startMatch: {fileID: 122528163}
-  rollTime: 2
-  diceChangeTime: 0.1
+  confirmUI: {fileID: 1831751091}
+  diceRollTime: 0.1
+  diceRollFrames: 10
+  eivorThinkTime: 2
 --- !u!1 &141826109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1408,7 @@ GameObject:
   - component: {fileID: 141826112}
   - component: {fileID: 141826111}
   m_Layer: 0
-  m_Name: Dice5
+  m_Name: Dice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3076,7 +2964,7 @@ GameObject:
   - component: {fileID: 319085303}
   - component: {fileID: 319085302}
   m_Layer: 0
-  m_Name: Dice6
+  m_Name: Dice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4531,7 +4419,7 @@ GameObject:
   - component: {fileID: 417123389}
   - component: {fileID: 417123388}
   m_Layer: 0
-  m_Name: Dice3
+  m_Name: Dice4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5293,12 +5181,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1295497522}
-  - {fileID: 1697308762}
-  - {fileID: 1910918499}
-  - {fileID: 687378991}
-  - {fileID: 141826110}
   - {fileID: 319085305}
+  - {fileID: 141826110}
+  - {fileID: 687378991}
+  - {fileID: 1910918499}
+  - {fileID: 1697308762}
+  - {fileID: 1295497522}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553058054
@@ -5416,7 +5304,7 @@ GameObject:
   - component: {fileID: 565328733}
   - component: {fileID: 565328732}
   m_Layer: 0
-  m_Name: Dice6
+  m_Name: Dice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5724,7 +5612,6 @@ GameObject:
   - component: {fileID: 629090125}
   - component: {fileID: 629090127}
   - component: {fileID: 629090126}
-  - component: {fileID: 629090129}
   - component: {fileID: 629090128}
   m_Layer: 0
   m_Name: DiceImage
@@ -5791,62 +5678,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 629090124}
   m_CullTransparentMesh: 1
 --- !u!114 &629090128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629090124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 629090129}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &629090129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6331,8 +6162,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 681084522}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 740676728}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6366,7 +6197,7 @@ GameObject:
   - component: {fileID: 687378993}
   - component: {fileID: 687378992}
   m_Layer: 0
-  m_Name: Dice4
+  m_Name: Dice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7087,7 +6918,7 @@ GameObject:
   - component: {fileID: 752087839}
   - component: {fileID: 752087838}
   m_Layer: 0
-  m_Name: Dice5
+  m_Name: Dice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7299,7 +7130,7 @@ GameObject:
   - component: {fileID: 763313321}
   - component: {fileID: 763313320}
   m_Layer: 0
-  m_Name: Dice4
+  m_Name: Dice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7518,8 +7349,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 809309213}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 1791830881}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8075,7 +7906,7 @@ GameObject:
   - component: {fileID: 898898127}
   - component: {fileID: 898898126}
   m_Layer: 0
-  m_Name: Dice3
+  m_Name: Dice4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8197,12 +8028,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1196049591}
-  - {fileID: 1957823024}
-  - {fileID: 898898125}
-  - {fileID: 763313319}
-  - {fileID: 752087837}
   - {fileID: 1788543131}
+  - {fileID: 752087837}
+  - {fileID: 763313319}
+  - {fileID: 898898125}
+  - {fileID: 1957823024}
+  - {fileID: 1196049591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961944190
@@ -8216,7 +8047,6 @@ GameObject:
   - component: {fileID: 961944191}
   - component: {fileID: 961944193}
   - component: {fileID: 961944192}
-  - component: {fileID: 961944195}
   - component: {fileID: 961944194}
   m_Layer: 0
   m_Name: DiceImage
@@ -8283,62 +8113,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 961944190}
   m_CullTransparentMesh: 1
 --- !u!114 &961944194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961944190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 961944195}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &961944195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8947,7 +8721,7 @@ GameObject:
   - component: {fileID: 1053299094}
   - component: {fileID: 1053299093}
   m_Layer: 0
-  m_Name: Dice6
+  m_Name: Dice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9174,12 +8948,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1470714490}
-  - {fileID: 1681815437}
-  - {fileID: 2036691361}
-  - {fileID: 2101512538}
-  - {fileID: 1745581568}
   - {fileID: 565328735}
+  - {fileID: 1745581568}
+  - {fileID: 2101512538}
+  - {fileID: 2036691361}
+  - {fileID: 1681815437}
+  - {fileID: 1470714490}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081554748
@@ -9595,12 +9369,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2136232709}
-  - {fileID: 1710221197}
-  - {fileID: 417123387}
-  - {fileID: 1494588034}
-  - {fileID: 1500018989}
   - {fileID: 1053299096}
+  - {fileID: 1500018989}
+  - {fileID: 1494588034}
+  - {fileID: 417123387}
+  - {fileID: 1710221197}
+  - {fileID: 2136232709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157691550
@@ -9822,7 +9596,6 @@ GameObject:
   - component: {fileID: 1171762895}
   - component: {fileID: 1171762897}
   - component: {fileID: 1171762896}
-  - component: {fileID: 1171762899}
   - component: {fileID: 1171762898}
   m_Layer: 0
   m_Name: DiceImage
@@ -9895,62 +9668,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171762894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1171762899}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &1171762899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171762894}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
@@ -9972,7 +9689,7 @@ GameObject:
   - component: {fileID: 1196049593}
   - component: {fileID: 1196049592}
   m_Layer: 0
-  m_Name: Dice1
+  m_Name: Dice6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10627,7 +10344,6 @@ GameObject:
   - component: {fileID: 1295024770}
   - component: {fileID: 1295024772}
   - component: {fileID: 1295024771}
-  - component: {fileID: 1295024774}
   - component: {fileID: 1295024773}
   m_Layer: 0
   m_Name: DiceImage
@@ -10700,62 +10416,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295024769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 809309210}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122528165}
-        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
-        m_MethodName: diceClick
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1295024774}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &1295024774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295024769}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
@@ -10777,7 +10437,7 @@ GameObject:
   - component: {fileID: 1295497524}
   - component: {fileID: 1295497523}
   m_Layer: 0
-  m_Name: Dice1
+  m_Name: Dice6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12153,7 +11813,7 @@ GameObject:
   - component: {fileID: 1470714492}
   - component: {fileID: 1470714491}
   m_Layer: 0
-  m_Name: Dice1
+  m_Name: Dice6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12393,7 +12053,7 @@ GameObject:
   - component: {fileID: 1494588036}
   - component: {fileID: 1494588035}
   m_Layer: 0
-  m_Name: Dice4
+  m_Name: Dice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12499,7 +12159,7 @@ GameObject:
   - component: {fileID: 1500018991}
   - component: {fileID: 1500018990}
   m_Layer: 0
-  m_Name: Dice5
+  m_Name: Dice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12688,6 +12348,7 @@ RectTransform:
   m_Children:
   - {fileID: 270552783}
   - {fileID: 1755249372}
+  - {fileID: 1831751092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13678,7 +13339,7 @@ GameObject:
   - component: {fileID: 1681815439}
   - component: {fileID: 1681815438}
   m_Layer: 0
-  m_Name: Dice2
+  m_Name: Dice5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13784,7 +13445,7 @@ GameObject:
   - component: {fileID: 1697308764}
   - component: {fileID: 1697308763}
   m_Layer: 0
-  m_Name: Dice2
+  m_Name: Dice5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14063,7 +13724,7 @@ GameObject:
   - component: {fileID: 1710221199}
   - component: {fileID: 1710221198}
   m_Layer: 0
-  m_Name: Dice2
+  m_Name: Dice5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14282,8 +13943,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1711599625}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 52954987}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14392,7 +14053,7 @@ GameObject:
   - component: {fileID: 1745581570}
   - component: {fileID: 1745581569}
   m_Layer: 0
-  m_Name: Dice5
+  m_Name: Dice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14917,7 +14578,7 @@ GameObject:
   - component: {fileID: 1788543129}
   - component: {fileID: 1788543128}
   m_Layer: 0
-  m_Name: Dice6
+  m_Name: Dice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15191,6 +14852,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819447196}
   m_CullTransparentMesh: 1
+--- !u!1 &1831751091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1831751092}
+  - component: {fileID: 1831751095}
+  - component: {fileID: 1831751094}
+  - component: {fileID: 1831751093}
+  m_Layer: 5
+  m_Name: Confirm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1831751092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831751091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2020138120}
+  m_Father: {fileID: 1511726830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 297.1, y: 0}
+  m_SizeDelta: {x: 120, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1831751093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831751091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1831751094}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 122528165}
+        m_TargetAssemblyTypeName: DiceManager, Assembly-CSharp
+        m_MethodName: confirmClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1831751094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831751091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1831751095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831751091}
+  m_CullTransparentMesh: 1
 --- !u!1 &1852499224
 GameObject:
   m_ObjectHideFlags: 0
@@ -15459,8 +15253,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1869979085}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 72688366}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15494,7 +15288,7 @@ GameObject:
   - component: {fileID: 1910918501}
   - component: {fileID: 1910918500}
   m_Layer: 0
-  m_Name: Dice3
+  m_Name: Dice4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15957,7 +15751,7 @@ GameObject:
   - component: {fileID: 1957823026}
   - component: {fileID: 1957823025}
   m_Layer: 0
-  m_Name: Dice2
+  m_Name: Dice5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16434,6 +16228,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004790446}
   m_CullTransparentMesh: 1
+--- !u!1 &2020138119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020138120}
+  - component: {fileID: 2020138122}
+  - component: {fileID: 2020138121}
+  m_Layer: 5
+  m_Name: ConfirmText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2020138120
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020138119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1831751092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2020138121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020138119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Confirm
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 27.6
+  m_fontSizeBase: 27.6
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2020138122
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020138119}
+  m_CullTransparentMesh: 1
 --- !u!1 &2036691360
 GameObject:
   m_ObjectHideFlags: 0
@@ -16447,7 +16375,7 @@ GameObject:
   - component: {fileID: 2036691363}
   - component: {fileID: 2036691362}
   m_Layer: 0
-  m_Name: Dice3
+  m_Name: Dice4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17275,7 +17203,7 @@ GameObject:
   - component: {fileID: 2101512540}
   - component: {fileID: 2101512539}
   m_Layer: 0
-  m_Name: Dice4
+  m_Name: Dice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17592,7 +17520,7 @@ GameObject:
   - component: {fileID: 2136232711}
   - component: {fileID: 2136232710}
   m_Layer: 0
-  m_Name: Dice1
+  m_Name: Dice6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17811,8 +17739,8 @@ MonoBehaviour:
         m_MethodName: diceClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2137818271}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Outline, UnityEngine.UI
+          m_ObjectArgument: {fileID: 2122532096}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
