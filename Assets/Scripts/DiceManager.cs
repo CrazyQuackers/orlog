@@ -106,6 +106,7 @@ public class DiceManager : MonoBehaviour
 
         if (playerRolls == 3)
         {
+            yield return new WaitForSeconds(eivorThinkTime);
             confirmChoice(true, true);
         }
         else
