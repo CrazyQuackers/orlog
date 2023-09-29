@@ -8,11 +8,8 @@ public class DiceManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] playerDice = new GameObject[6];
     [SerializeField] private GameObject[] playerPlaceholderDice = new GameObject[6];
-    [SerializeField] private GameObject[] playerActiveDice = new GameObject[6];
-
     [SerializeField] private GameObject[] eivorDice = new GameObject[6];
     [SerializeField] private GameObject[] eivorPlaceholderDice = new GameObject[6];
-    [SerializeField] private GameObject[] eivorActiveDice = new GameObject[6];
 
     [SerializeField] private Sprite axe;
     [SerializeField] private Sprite arrow;
@@ -26,6 +23,7 @@ public class DiceManager : MonoBehaviour
     private Sprite[,] diceFaces = new Sprite[6, 6];
 
     [SerializeField] private StartMatch startMatch;
+    [SerializeField] private GodFavorPhase godFavorPhase;
     [SerializeField] private GameObject confirmUI;
 
     [SerializeField] private float diceRollTime;
@@ -41,13 +39,12 @@ public class DiceManager : MonoBehaviour
 
     void Start()
     {
-        setDiceActive(playerDice.Concat(playerPlaceholderDice).Concat(playerActiveDice)
-            .Concat(eivorDice).Concat(eivorPlaceholderDice).Concat(eivorActiveDice).ToList(), false);
+        setDiceActive(playerDice.Concat(playerPlaceholderDice).Concat(eivorDice).Concat(eivorPlaceholderDice).ToList(), false);
         setDiceFaces();
         confirmUI.SetActive(false);
     }
 
-    private void setDiceActive(List<GameObject> allDice, bool active)
+    public void setDiceActive(List<GameObject> allDice, bool active)
     {
         foreach (GameObject dice in allDice)
         {
@@ -69,8 +66,7 @@ public class DiceManager : MonoBehaviour
     {
         if (playerRolls == 3 && eivorRolls == 3)
         {
-            Debug.Log("roll phase done");
-            //move on to the next part of the round
+            StartCoroutine(godFavorPhase.godFavorPhase());
         }
         else
         {
@@ -301,5 +297,30 @@ public class DiceManager : MonoBehaviour
         diceFaces[5, 3] = axe;
         diceFaces[5, 4] = arrow;
         diceFaces[5, 5] = helmet_plus;
+    }
+
+    public GameObject[] getPlayerPlaceholderDice()
+    {
+        return playerPlaceholderDice;
+    }
+
+    public GameObject[] getEivorPlaceholderDice()
+    {
+        return eivorPlaceholderDice;
+    }
+
+    public Sprite[] getStartingPlayerDiceOrder()
+    {
+        return new Sprite[9] { axe, arrow, arrow_plus, helmet, helmet_plus, shield, shield_plus, steal, steal_plus };
+    }
+
+    public Sprite[] getOtherPlayerDiceOrder()
+    {
+        return new Sprite[9] { helmet, helmet_plus, shield, shield_plus, axe, arrow, arrow_plus, steal, steal_plus };
+    }
+
+    public float getEivorThinkTime()
+    {
+        return eivorThinkTime;
     }
 }
